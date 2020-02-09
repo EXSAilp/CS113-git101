@@ -1,0 +1,26 @@
+1.การคอมไพล์แยกส่วน
+    การนำ code ของ 2 โปรแกรม มารวมกัน
+    สมมุติว่ามีไฟล์อยู่สองไฟล์
+        1) test1.c
+        2) test2.c
+    วิธีการคอมไพล์
+        1.สร้างไฟล์ object ของทั้งสองไฟล์โดย
+            gcc -c test1.c      \\สร้าง test1.o
+            gcc -c test2.c      \\สร้าง test2.o
+        2.การรวมไฟล์สองไฟล์สร้างไฟล์ .exe
+            gcc test1.o test2.o -o all.exe   
+
+2. Git Basic
+    คำสั่งต่างๆที่ใช้ใน Command Prompt หรือ Terminal
+    1.git --version  ตรวจสอบ version ของ git
+    2.git init  เป็นการสร้าง git project (ทำทุกครั้ง)(จะได้ folder ชื่อ .git)
+    3.git status  ตรวจสอบสถานะของไฟล์ว่าเปลี่ยนแปลงหรือป่าว
+    4.git add ชื่อไฟล์   การเพิ่มไฟล์เข้า staging area พร้อมที่จะ commit
+    5.การตั้งชื่อและอีเมลระบุผู้ commit 
+        git config user.name "ชื่อ"
+        git config user.email "email"
+    6.git commit -m "ข้อความที่จะแสดง"  commit file เพื่อเก็บเป็น checkpoint
+    7.git log --all --decorate --oneline --graph การดู checkpoint ทั้งหมด
+    8.git remote add <ชื่อ remote เช่น origin> <git url>  เชื่อม local repository กับ github
+    9.git push -u origin master  ส่งไฟล์และประวัติไปเก็บที่ github
+    10.git clone <git url>  การนำไฟล์จาก github มาทำงานต่อ
