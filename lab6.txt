@@ -1,0 +1,51 @@
+1.การใช้ scanf()
+    scanf("typeตัวแปรที่เก็บ",ตำแหน่งตัวแปรที่ต้องการเก็บ);
+    ตัวอย่าง code
+        #include <stdio.h>
+        int main()
+        {
+            int a;
+            char c;
+            float f;
+
+            scanf("%d",&a);
+            scanf("%f",&f);
+            scanf("%s",&c);
+            
+            ***&ตัวแปร เครื่องหมาย & บ่งบอกถึง pointer ของตัวแปรนั้น
+        }
+
+2.Pointer
+    คือ การใช้ตัวแปรในการชี้ตำแหน่ง address ในหน่วยความจำ
+
+    ตัวอย่าง code
+    #include <stdio.h>
+    int main()
+    { 
+        int i = 10;
+        int *p;                     \\กำหนดตัว pointer
+        p = &i;
+        printf(" i = %d\n", i);     
+        printf("*p = %d\n", *p);    \\print ค่า pointer ของ i เป็นเลขฐาน 16
+    }
+
+3.Pass by reference
+    การเปลี่ยนแปลงค่าโดยใช้ pointer
+
+    ตัวอย่าง code
+        #include<stdio.h>
+    
+        int x(int *ptr)
+        {
+            *ptr =10;
+        }   
+    
+        int main()
+        {
+            int data = 100;
+            x(&data);
+            printf("data = %d",data);
+        }
+
+        output
+        >> 10
