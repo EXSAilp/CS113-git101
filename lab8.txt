@@ -1,0 +1,10 @@
+Git 2:Branch Merge Conflict
+    1.git clone <git-url> เป็นคำสั่งที่นำ git จาก github มาทำงานต่อในคอมพิวเตอร์
+    2.git branch <branch-name> เป็นคำสั่งที่สร้าง branch ใหม่ขึ้นมา
+    3.git branch ใช้แสดงชื่อ branch ทั้งหมด
+    4.git checkout <ชื่อ branch> เปลี่ยนไปยัง branch ที่ต้องการ
+    5.git merge <ชื่อ branch> (เราอยู่ใน branch master) การรวม branch ที่เราต้องการ
+      เข้ากับ branch master ทำให้ไฟล์
+
+Conflict เกิดขึ้นเมื่อเรามีการทำงานใน git เดียวกันแต่ทำงานกันสองคนขึ้นไปแล้วต่างคนต่าง push ไฟล์เดียวกัน
+แต่เนื้อหาภายในไฟล์ไม่เหมือนกันทำให้เกิด Conflict ขึ้นเราต้องเลือกว่าจะใช้อันไหน
